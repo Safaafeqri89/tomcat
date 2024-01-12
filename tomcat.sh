@@ -4,7 +4,11 @@
 TOMCAT_VERSION="10.0.20"
 
 # Descargar Apache Tomcat
-sudo wget https://dlcdn.apache.org/tomcat/tomcat-10/v${TOMCAT_VERSION}/bin/apache-tomcat-${TOMCAT_VERSION}.tar.gz -P /tmp
+TOMCAT_URL="https://dlcdn.apache.org/tomcat/tomcat-10/v${TOMCAT_VERSION}/bin/apache-tomcat-${TOMCAT_VERSION}.tar.gz"
+TMP_DIR="/tmp/tomcat"
+
+sudo mkdir -p ${TMP_DIR}
+sudo wget ${TOMCAT_URL} -P ${TMP_DIR}
 
 # Verificar si la descarga fue exitosa
 if [ $? -ne 0 ]; then
@@ -17,7 +21,7 @@ INSTALL_DIR="/opt/tomcat"
 sudo mkdir -p ${INSTALL_DIR}
 
 # Extraer el archivo descargado
-sudo tar xf /tmp/apache-tomcat-${TOMCAT_VERSION}.tar.gz -C ${INSTALL_DIR} --strip-components=1
+sudo tar xf ${TMP_DIR}/apache-tomcat-${TOMCAT_VERSION}.tar.gz -C ${INSTALL_DIR} --strip-components=1
 
 # Establecer permisos adecuados
 sudo chgrp -R root ${INSTALL_DIR}
