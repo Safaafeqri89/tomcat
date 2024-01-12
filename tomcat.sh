@@ -1,7 +1,7 @@
 #!/bin/bash
 
-# Utilizamos la última versión de Tomcat 10
-TOMCAT_VERSION="10.0.12"
+# Utilizamos la versión 10.0.15 de Tomcat
+TOMCAT_VERSION="10.0.15"
 
 # Descargar Apache Tomcat
 TOMCAT_URL="https://dlcdn.apache.org/tomcat/tomcat-10/v${TOMCAT_VERSION}/bin/apache-tomcat-${TOMCAT_VERSION}.tar.gz"
@@ -33,3 +33,4 @@ sudo chown -R root ${INSTALL_DIR}/webapps/ ${INSTALL_DIR}/work/ ${INSTALL_DIR}/t
 sudo ${INSTALL_DIR}/bin/startup.sh
 
 echo "Apache Tomcat ${TOMCAT_VERSION} se ha instalado correctamente en ${INSTALL_DIR}"
+
