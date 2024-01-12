@@ -1,7 +1,7 @@
 #!/bin/bash
 
-# Cambia la versión de Tomcat si es necesario
-TOMCAT_VERSION="10.0.20"
+# Utilizamos la última versión de Tomcat 10
+TOMCAT_VERSION="10.0.12"
 
 # Descargar Apache Tomcat
 TOMCAT_URL="https://dlcdn.apache.org/tomcat/tomcat-10/v${TOMCAT_VERSION}/bin/apache-tomcat-${TOMCAT_VERSION}.tar.gz"
