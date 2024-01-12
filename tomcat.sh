@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # Utilizamos la versión 10.0.15 de Tomcat (o la versión que prefieras)
-TOMCAT_VERSION="10.0.15"
+TOMCAT_VERSION="10.1.18"
 
 # Reemplaza la URL con la correcta
 TOMCAT_URL="https://downloads.apache.org/tomcat/tomcat-10/v${TOMCAT_VERSION}/bin/apache-tomcat-${TOMCAT_VERSION}.tar.gz"
