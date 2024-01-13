@@ -1,9 +1,9 @@
 #!/bin/bash
-
-# Actualiza los paquetes del sistema
+# en nuestra consola ejecutamos el siguiente comando  sudo wget https://raw.githubusercontent.com/Safaafeqri89/tomcat/main/tomcat.sh -O install_tomcat.sh
+# Actualiza los paquetes
 sudo apt update
 
-# Instala el JDK por defecto
+# Instalar el JDK por defecto
 sudo apt install -y default-jdk
 
 # Crea un usuario para ejecutar Tomcat
@@ -14,7 +14,7 @@ wget -c https://downloads.apache.org/tomcat/tomcat-9/v9.0.34/bin/apache-tomcat-9
 sudo tar xf apache-tomcat-9.0.34.tar.gz -C /opt/tomcat
 sudo ln -s /opt/tomcat/apache-tomcat-9.0.34 /opt/tomcat/updated
 
-# Cambia los propietarios y permisos de Tomcat
+# Cambia permisos 
 sudo chown -R tomcat: /opt/tomcat/*
 sudo sh -c 'chmod +x /opt/tomcat/updated/bin/*.sh'
 
@@ -23,7 +23,7 @@ sudo nano /etc/systemd/system/tomcat.service
 
 
 
-# ⚠️IMPORTANTE⚠️. Pegamos ESTE CONTENIDO ⬇⬇⬇ y guardamos el archivo
+# pegar el codigo en archivo tomcat.service  /etc/systemd/system/tomcat.service y guardamos el archivo
 : '
 [Unit]
 Description=Apache Tomcat Web Application Container
@@ -69,6 +69,5 @@ sudo ufw allow 8080/tcp
 # Verifica la instalación accediendo a Tomcat en tu navegador
 echo "Verifica la instalación accediendo a http://<MIIP>:8080"
 
-# ⚠️'sudo systemctl status tomcat'⚠️ lo usaríamos para ver el estado de tomcat
+# sudo systemctl status tomcat
 
-# Fin del script
