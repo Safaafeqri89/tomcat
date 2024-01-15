@@ -1,5 +1,5 @@
 #!/bin/bash
-# en nuestra consola ejecutamos el siguiente comando  sudo wget https://raw.githubusercontent.com/Safaafeqri89/tomcat/main/tomcat.sh -O install_tomcat.sh
+# en nuestra consola ejecutamos el siguiente comando  sudo wget https://raw.githubusercontent.com/Safaafeqri89/tomcat/main/tomcat.sh 
 # Actualiza los paquetes
 sudo apt update
 
@@ -19,12 +19,7 @@ sudo chown -R tomcat: /opt/tomcat/*
 sudo sh -c 'chmod +x /opt/tomcat/updated/bin/*.sh'
 
 # Crea el archivo de unidad systemd para Tomcat
-sudo nano /etc/systemd/system/tomcat.service
-
-
-
-# pegar el codigo en archivo tomcat.service  /etc/systemd/system/tomcat.service y guardamos el archivo
-: '
+cat <<EOF | sudo tee /etc/systemd/system/tomcat.service
 [Unit]
 Description=Apache Tomcat Web Application Container
 After=network.target
@@ -50,8 +45,8 @@ Restart=always
 
 [Install]
 WantedBy=multi-user.target
-'
 
+EOF
 
 
 # Recarga el daemon de systemd
