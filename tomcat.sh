@@ -1,5 +1,6 @@
 #!/bin/bash
 # en nuestra consola ejecutamos el siguiente comando  sudo wget https://raw.githubusercontent.com/Safaafeqri89/tomcat/main/tomcat.sh 
+#luego ./tomcat.sh
 # Actualiza los paquetes
 sudo apt update
 
