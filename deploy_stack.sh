@@ -1,7 +1,7 @@
 #!/bin/bash
 
-# Desplegamos la plantilla de CloudFormation en base a nuestro fichero YAML, establecemos el nombre de la pila y 
-# establecemos las capacidades de nuestra pila
+#desplegamos un stack y  Nombre del archivo YAML que contiene la plantilla
+# Crear o actualizar el stack
 aws cloudformation deploy \
   --template-file tomcat/main.yml \
   --stack-name "instanciaYML" \
