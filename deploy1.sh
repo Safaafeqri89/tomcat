@@ -4,5 +4,5 @@
 # Crear o actualizar el stack
 aws cloudformation deploy \
   --template-file tomcat/main.yml \
-  --stack-name "instanciadesdeCLI" \
+  --stack-name "instanciaCLI" \
   --capabilities CAPABILITY_NAMED_IAM
