@@ -1,15 +1,8 @@
 #!/bin/bash
 
-# Nombre del stack
-STACK_NAME "instanciaYML"
-
-# Nombre del archivo YAML que contiene la plantilla
-TEMPLATE_FILE main.yml
-
-# Nombre del archivo de parámetros (si es necesario)
-
-# Crear o actualizar el stack
+# Desplegamos la plantilla de CloudFormation en base a nuestro fichero YAML, establecemos el nombre de la pila y 
+# establecemos  las capacidades de nuestra pila
 aws cloudformation deploy \
-  --stack-name $STACK_NAME \
-  --template-file $TEMPLATE_FILE \
-  --capabilities CAPABILITY_IAM
+--template-file main.yml \
+--stack-name "instanciaYML" \
+--capabilities CAPABILITY_NAMED_IAM
