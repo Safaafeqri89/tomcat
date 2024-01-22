@@ -1,10 +1,10 @@
 #!/bin/bash
 
 # Nombre del stack
-STACK_NAME="instanciaYML"
+STACK_NAME "instanciaYML"
 
 # Nombre del archivo YAML que contiene la plantilla
-TEMPLATE_FILE="main.yml"
+TEMPLATE_FILE main.yml
 
 # Nombre del archivo de parámetros (si es necesario)
 
