@@ -7,6 +7,6 @@ export AWS_DEFAULT_REGION=us-east-1
 # Crear o actualizar el stack
 aws cloudformation deploy \
   --template-file tomcat/main.yml \
-  --stack-name "instanciaYML" \
+  --stack-name "instanciadesdeCLI" \
   --capabilities CAPABILITY_NAMED_IAM
 
