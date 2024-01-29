@@ -236,4 +236,3 @@ Resources:
       Tags:
         - Key: Name
           Value: !Ref AWS::StackName
-
